@@ -26,22 +26,22 @@ To get started, setup a new environment (preferably using anaconda) using  `./en
 Set the following environment variables with the right value in your environment.
 
 The default values are as follows:
----
+
 ```
 APPLICANTS_DATA=data_exercise_applicants.csv
 HIRES_DATA=data_exercise_hires.csv
 DATA_DIR=../data
 REPORT_DIR=../reports
 ```
----
+
 ### Data Munging and preprocessing
 
 Data munging is done by running the data_load_transform.py module.
 
 To run the data munging module, go into the `./src` subdirectory and type the following in your terminal
----
+
 ``` python data_load_transform.py ```
----
+
 
 This will, 
 - load the datasets (applicants and hires)
@@ -53,17 +53,18 @@ This will,
 
 The analysis notebook can be found under `./notebooks` directory as `arena_data_analysis.ipynb`
 Run the following command in your terminal from the `./notebooks` directory
----
+
+
 ```ipython notebook arena_data_analysis.ipynb```
----
+
 
 ### Predictive Modeling
 
 To tune a model, train, test and return a classification report, run the following command in `./src' directory from your terminal
  
----
+ 
 ```python model.py```
----
+
 
 
 
