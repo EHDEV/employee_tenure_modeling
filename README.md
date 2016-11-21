@@ -1,14 +1,13 @@
-# arena_analysis
-A Data Analysis and modeling challenge for arena.io
+A Data Analysis and modeling project
 
 ## Code Organization
 
-+ arena_analysis
++ data_analysis
     - data 
         - [file1].csv
         - [file2].csv
     - notebooks
-        - arena_analysis.ipynb
+        - data_analysis.ipynb
     - src
         - data_load_transform.py
         - visuals.py
@@ -51,11 +50,11 @@ This will,
 
 ### Data Analysis
 
-The analysis notebook can be found under `./notebooks` directory as `arena_data_analysis.ipynb`
+The analysis notebook can be found under `./notebooks` directory as `jupyter_data_analysis.ipynb`
 Run the following command in your terminal from the `./notebooks` directory
 
 
-```ipython notebook arena_data_analysis.ipynb```
+```ipython notebook jupyter_data_analysis.ipynb```
 
 
 ### Predictive Modeling
