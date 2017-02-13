@@ -41,7 +41,6 @@ To run the data munging module, go into the `./src` subdirectory and type the fo
 
 ``` python data_load_transform.py ```
 
-
 This will, 
 - load the datasets (applicants and hires)
 - preprocess the data (encoding target, binarizing categorical variables, filling nan values, etc)
@@ -54,15 +53,16 @@ The analysis notebook can be found under `./notebooks` directory as `jupyter_dat
 Run the following command in your terminal from the `./notebooks` directory
 
 
-```shell jupyter notebook jupyter_data_analysis.ipynb```
+```jupyter notebook jupyter_data_analysis.ipynb```
 
 
-### Predictive Modeling
+### Classifying Tenure Length Category
 
+Here, we can train an algorithm of our choice and make predictions on our test data.
 To tune a model, train, test and return a classification report, run the following command in `./src' directory from your terminal
  
  
-```python model.py```
+```python model.py [[path to data directory | Default: ./data/]]```
 
 
 
