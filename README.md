@@ -54,7 +54,7 @@ The analysis notebook can be found under `./notebooks` directory as `jupyter_dat
 Run the following command in your terminal from the `./notebooks` directory
 
 
-```bash jupyter notebook jupyter_data_analysis.ipynb```
+```shell jupyter notebook jupyter_data_analysis.ipynb```
 
 
 ### Predictive Modeling
