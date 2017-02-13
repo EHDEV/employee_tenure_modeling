@@ -18,7 +18,7 @@ A Data Analysis and modeling project
     
 ### Setup a conda environment
 
-To get started, setup a new environment (preferably using anaconda) using  `./environment.yml` file
+To get started, setup a new environment (preferably with anaconda) using  `./environment.yml` file
 
 `conda env create -f path/to/environment.yml`
 
@@ -54,7 +54,7 @@ The analysis notebook can be found under `./notebooks` directory as `jupyter_dat
 Run the following command in your terminal from the `./notebooks` directory
 
 
-```ipython notebook jupyter_data_analysis.ipynb```
+```bash jupyter notebook jupyter_data_analysis.ipynb```
 
 
 ### Predictive Modeling
