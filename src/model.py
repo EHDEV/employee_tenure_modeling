@@ -7,7 +7,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.metrics import classification_report, confusion_matrix
-import numpy as np
+import numpy as np 
 
 
 class Model(object):
@@ -62,7 +62,32 @@ class Model(object):
             tuned_models += [GridSearchCV(clf, param_grid=param)]
 
         return tuned_models
+    
+    def ensemble_learn(self, X, clfs=[]):
+        dataset_blend_train = np.zeros((X.shape[0], len(clfs)))
+        # (2501, 5)
+        dataset_blend_test = np.zeros((X_submission.shape[0], len(clfs)))
 
+        for j, clf in enumerate(clfs):
+            print(j, clf)
+            dataset_blend_test_j = np.zeros((X_submission.shape[0], len(skf)))
+            for i, (train, test) in enumerate(skf):
+                print("Fold", i)
+                X_train = X[train]
+                y_train = y[train]
+                X_test = X[test]
+                y_test = y[test]
+                clf.fit(X_train, y_train)
+                y_submission = clf.predict_proba(X_test)[:, 1]
+                dataset_blend_train[test, j] = y_submission
+                dataset_blend_test_j[:, i] = clf.predict_proba(X_submission)[:, 1]
+            dataset_blend_test[:, j] = dataset_blend_test_j.mean(1)
+
+        print
+        print("Blending.")
+        clf = LogisticRegression()
+        clf.fit(dataset_blend_train, y)
+        y_submission = clf.predict_proba(dataset_blend_test)[:, 1]
 if __name__ == '__main__':
     dlt = DataLoadTransform()
     raw_data = dlt.init_load_data()
