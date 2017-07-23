@@ -1,4 +1,4 @@
-A Data Analysis and modeling project
+A data exploration, analysis and modeling project on employee and applicant data to explore, analyze and predict potential length of applicants' employment at given organizations.
 
 ## Code Organization
 
