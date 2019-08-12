@@ -47,7 +47,7 @@ This will,
 - splits the data into test and train samples
 
 
-### Data Analysis
+### Analysis
 
 The analysis notebook can be found under `./notebooks` directory as `jupyter_data_analysis.ipynb`
 Run the following command in your terminal from the `./notebooks` directory
@@ -56,7 +56,7 @@ Run the following command in your terminal from the `./notebooks` directory
 ```jupyter notebook jupyter_data_analysis.ipynb```
 
 
-### Classifying Tenure Length Category
+### Classifying Tenure Length
 
 Here, we can train an algorithm of our choice and make predictions on our test data.
 To tune a model, train, test and return a classification report, run the following command in `./src' directory from your terminal
